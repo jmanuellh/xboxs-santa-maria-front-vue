@@ -9,11 +9,10 @@
 </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue';
+<script>
 import axios from 'axios';
 
-export default Vue.extend({
+export default {
   name: 'GamesList',
   data() {
     return {
@@ -25,7 +24,6 @@ export default Vue.extend({
   },
   methods: {
     getGames() {
-      this.message = 'Hol';
       axios.get('http://127.0.0.1:8000/api/juego')
         .then((response) => {
           this.games = response.data;
@@ -34,5 +32,5 @@ export default Vue.extend({
         });
     },
   },
-});
+};
 </script>
