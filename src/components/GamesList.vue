@@ -1,12 +1,25 @@
-<template>
-<div>
-  <div
-    v-for="game in games"
-    :key="game.id"
-  >
-    {{ game.name }}
-  </div>
-</div>
+<template lang="pug">
+div
+  main
+    section
+      v-container(class="text-xs-center")
+        h1(class="display-2") Juegos disponibles
+      v-container(class="text-xs-center")
+        v-layout(
+          row
+          wrap
+        )
+          v-flex(
+            v-for="game in games"
+            :key="game.id"
+            xs12
+            sm6
+            md4
+          )
+            v-card
+              v-card-text(primary-title)
+                h3(class="headline") {{ game.name }}
+
 </template>
 
 <script>
