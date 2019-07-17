@@ -1,19 +1,25 @@
 <template lang="pug">
-v-container(class="text-xs-center")
-  v-layout(
-    row
-    wrap
-  )
-    v-flex(
-      v-for="game in games"
-      :key="game.id"
-      xs12
-      sm6
-      md4
+  v-container(class="text-xs-center")
+    // Condicional para mostrar circulo de carga mientran se obtienen los datos
+    v-progress-circular(
+      v-if="!chargedGames"
+      indeterminate
     )
-      v-card
-        v-card-text(primary-title)
-          h3(class="headline") {{ game.name }}
+    v-layout(
+      v-else
+      row
+      wrap
+    )
+      v-flex(
+        v-for="game in games"
+        :key="game.id"
+        xs12
+        sm6
+        md4
+      )
+        v-card
+          v-card-text(primary-title)
+            h3(class="headline") {{ game.name }}
 
 </template>
 
@@ -25,6 +31,7 @@ export default {
   data() {
     return {
       games: {},
+      chargedGames: false,
     };
   },
   mounted() {
@@ -37,6 +44,10 @@ export default {
           this.games = response.data;
         })
         .catch(() => {
+          this.games = [{id:"0", name:"Datos no disponibles"}]
+        })
+        .then(() => {
+          this.chargedGames = true;
         });
     },
   },
