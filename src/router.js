@@ -11,7 +11,7 @@ export default new Router({
       path: '/',
       name: 'game-list',
       component() {
-        return import(/* webpackChunkName: "about" */ './views/GamesListView.vue');
+        return import(/* webpackChunkName: "game-list" */ './views/GamesListView.vue');
       },
     },
   ],

@@ -44,7 +44,7 @@ export default {
           this.games = response.data;
         })
         .catch(() => {
-          this.games = [{id:"0", name:"Datos no disponibles"}]
+          this.games = [{ id: '0', name: 'Datos no disponibles' }];
         })
         .then(() => {
           this.chargedGames = true;

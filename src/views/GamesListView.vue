@@ -1,7 +1,7 @@
 <template lang="pug">
   section
-    v-container(class="text-xs-center")
-      h1(class="display-2") Juegos disponibles
+    v-container
+      h1(class="display-2 text-xs-center") Juegos disponibles
     GamesList
 </template>
 
