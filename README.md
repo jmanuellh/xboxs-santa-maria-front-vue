@@ -1,6 +1,6 @@
 # xboxs
 
-![pantalla de juegos de xboxs santa maria](http://drive.google.com/uc?export=view&id=1SvPL-ppQRXWzsvpGWqfj9DYrgrjK-k87)
+![pantalla de juegos de xboxs santa maria](http://drive.google.com/uc?export=view&id=1avagFEXFQQPTBi7jxoKqE2MuenLkgYvr)
 
 ## Project setup
 ```
